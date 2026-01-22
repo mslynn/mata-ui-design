@@ -1,0 +1,1 @@
+import{c as i,o as a,ai as t}from"./chunks/framework.DWXoSCcz.js";const e=JSON.parse('{"title":"Tree","description":"","frontmatter":{},"headers":[],"relativePath":"components/tree.md","filePath":"components/tree.md"}'),n={name:"components/tree.md"},p=Object.assign(n,{setup(h){return(l,s)=>(a(),i("div",null,[...s[0]||(s[0]=[t("",14)])]))}});export{e as __pageData,p as default};
