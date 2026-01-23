@@ -1,8 +1,17 @@
 {
     "name": "lynn-mata-ui-design",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "type": "module",
     "description": "Vue 3 UI Library for Mata Education",
+    "homepage": "https://mslynn.github.io/mata-ui-design/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mslynn/mata-ui-design.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mslynn/mata-ui-design/issues"
+    },
+    "license": "MIT",
     "main": "./dist/mata-ui.umd.js",
     "module": "./dist/mata-ui.mjs",
     "types": "./dist/index.d.ts",

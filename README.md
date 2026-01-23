@@ -2,6 +2,10 @@
 
 Vue 3 UI Library for Mata Education.
 
+## Documentation
+
+📘 **[Documentation & Demos](https://mslynn.github.io/mata-ui-design/)**
+
 ## Installation
 
 ```bash
