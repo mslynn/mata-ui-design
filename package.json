@@ -1,6 +1,6 @@
 {
     "name": "lynn-mata-ui-design",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "type": "module",
     "description": "Vue 3 UI Library for Mata Education",
     "homepage": "https://mslynn.github.io/mata-ui-design/",
@@ -36,6 +36,8 @@
         "deploy:cf": "npm run docs:build && npx wrangler pages deploy docs/.vitepress/dist"
     },
     "peerDependencies": {
+        "dayjs": "^1.11.21",
+        "element-plus": "^2.14.0",
         "vue": "^3.3.0"
     },
     "devDependencies": {

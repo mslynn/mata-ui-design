@@ -14,6 +14,27 @@ size: "small" | "medium" | "large";
 disabled: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
 
+declare const __VLS_component_10: DefineComponent<__VLS_Props_11, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+change: (value: [string, string]) => any;
+"update:modelValue": (value: [string, string]) => any;
+"semester-click": () => any;
+}, string, PublicProps, Readonly<__VLS_Props_11> & Readonly<{
+onChange?: ((value: [string, string]) => any) | undefined;
+"onUpdate:modelValue"?: ((value: [string, string]) => any) | undefined;
+"onSemester-click"?: (() => any) | undefined;
+}>, {
+presets: DateRangePreset[];
+disabledDate: (date: Date) => boolean;
+semesterActionText: string;
+showSemesterAction: boolean;
+startPlaceholder: string;
+endPlaceholder: string;
+separator: string;
+locale: "zh" | "en";
+}, {}, {}, {}, string, ComponentProvideOptions, false, {
+rootRef: HTMLDivElement;
+}, HTMLDivElement>;
+
 declare const __VLS_component_2: DefineComponent<__VLS_Props_2, {
 focus: () => void | undefined;
 blur: () => void | undefined;
@@ -128,10 +149,67 @@ expandedKeys: (string | number)[];
 level: number;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
+declare const __VLS_component_8: DefineComponent<__VLS_Props_9, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<__VLS_Props_9> & Readonly<{}>, {
+disabled: boolean;
+placement: "top" | "bottom" | "left" | "right";
+}, {}, {}, {}, string, ComponentProvideOptions, false, {
+tooltipRef: HTMLDivElement;
+}, HTMLDivElement>;
+
+declare const __VLS_component_9: DefineComponent<__VLS_Props_10, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+"update:modelValue": (value: string | number) => any;
+}, string, PublicProps, Readonly<__VLS_Props_10> & Readonly<{
+"onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+
 declare type __VLS_Props = {
     type?: 'primary' | 'default' | 'danger' | 'text';
     size?: 'small' | 'medium' | 'large';
     disabled?: boolean;
+};
+
+declare type __VLS_Props_10 = {
+    modelValue: string | number;
+    options: Array<{
+        label: string;
+        value: string | number;
+    }>;
+};
+
+declare type __VLS_Props_11 = {
+    modelValue: string[] | null;
+    presets?: DateRangePreset[];
+    disabledDate?: (date: Date) => boolean;
+    semesterActionText?: string;
+    showSemesterAction?: boolean;
+    startPlaceholder?: string;
+    endPlaceholder?: string;
+    separator?: string;
+    locale?: "zh" | "en";
+};
+
+declare type __VLS_Props_12 = {
+    modelValue: number;
+    maxStars?: number;
+    size?: number;
+    gap?: number;
+    fillColor?: string;
+    emptyColor?: string;
+    strokeWidth?: number;
+    readonly?: boolean;
+    wrapperClass?: string;
+};
+
+declare type __VLS_Props_13 = {
+    src: string;
+    alt?: string;
+    imgClass?: string;
+    wrapperClass?: string;
+};
+
+declare type __VLS_Props_14 = {
+    visible: boolean;
+    imageUrl: string;
 };
 
 declare type __VLS_Props_2 = {
@@ -210,6 +288,12 @@ declare type __VLS_Props_8 = {
     level?: number;
 };
 
+declare type __VLS_Props_9 = {
+    content?: string;
+    placement?: 'top' | 'bottom' | 'left' | 'right';
+    disabled?: boolean;
+};
+
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
@@ -217,6 +301,24 @@ declare function __VLS_template(): {
     };
     refs: {};
     rootEl: HTMLButtonElement;
+};
+
+declare function __VLS_template_10(): {
+    attrs: Partial<{}>;
+    slots: {
+        sidebar?(_: {
+            presets: DateRangePreset[];
+            activePresetKey: string;
+            selectPreset: (presetKey: string) => void;
+            semesterActionText: string;
+            emitSemesterClick: () => void;
+            class: any;
+        }): any;
+    };
+    refs: {
+        rootRef: HTMLDivElement;
+    };
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_2(): {
@@ -300,7 +402,29 @@ declare function __VLS_template_7(): {
     rootEl: HTMLDivElement;
 };
 
+declare function __VLS_template_8(): {
+    attrs: Partial<{}>;
+    slots: {
+        default?(_: {}): any;
+    };
+    refs: {
+        tooltipRef: HTMLDivElement;
+    };
+    rootEl: HTMLDivElement;
+};
+
+declare function __VLS_template_9(): {
+    attrs: Partial<{}>;
+    slots: {
+        trigger?(_: {}): any;
+    };
+    refs: {};
+    rootEl: HTMLDivElement;
+};
+
 declare type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+
+declare type __VLS_TemplateResult_10 = ReturnType<typeof __VLS_template_10>;
 
 declare type __VLS_TemplateResult_2 = ReturnType<typeof __VLS_template_2>;
 
@@ -314,7 +438,17 @@ declare type __VLS_TemplateResult_6 = ReturnType<typeof __VLS_template_6>;
 
 declare type __VLS_TemplateResult_7 = ReturnType<typeof __VLS_template_7>;
 
+declare type __VLS_TemplateResult_8 = ReturnType<typeof __VLS_template_8>;
+
+declare type __VLS_TemplateResult_9 = ReturnType<typeof __VLS_template_9>;
+
 declare type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_10<T, S> = T & {
     new (): {
         $slots: S;
     };
@@ -356,6 +490,18 @@ declare type __VLS_WithTemplateSlots_7<T, S> = T & {
     };
 };
 
+declare type __VLS_WithTemplateSlots_8<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_9<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
 declare interface Column {
     key: string;
     title: string;
@@ -364,12 +510,22 @@ declare interface Column {
     align?: 'left' | 'center' | 'right';
 }
 
+declare interface DateRangePreset {
+    key: string;
+    label: string;
+    start?: string;
+    end?: string;
+    mode?: "preset" | "custom";
+}
+
 declare const _default: {
     install: (app: App) => void;
 };
 export default _default;
 
 export declare const MButton: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
+
+export declare const MDateRangePicker: __VLS_WithTemplateSlots_10<typeof __VLS_component_10, __VLS_TemplateResult_10["slots"]>;
 
 declare interface MessageInstance {
     id: string;
@@ -394,7 +550,21 @@ declare interface MessageOptions {
  */
 declare type MessageType = 'success' | 'error' | 'warning' | 'info';
 
+export declare const MFilterPopover: __VLS_WithTemplateSlots_9<typeof __VLS_component_9, __VLS_TemplateResult_9["slots"]>;
+
+export declare const MImagePreview: DefineComponent<__VLS_Props_14, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+"update:visible": (value: boolean) => any;
+}, string, PublicProps, Readonly<__VLS_Props_14> & Readonly<{
+onClose?: (() => any) | undefined;
+"onUpdate:visible"?: ((value: boolean) => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+
 export declare const MInput: __VLS_WithTemplateSlots_2<typeof __VLS_component_2, __VLS_TemplateResult_2["slots"]>;
+
+export declare const MLazyImage: DefineComponent<__VLS_Props_13, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<__VLS_Props_13> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+containerRef: HTMLSpanElement;
+}, HTMLSpanElement>;
 
 export declare const MMessage: {
     success: (message: string, options?: Partial<MessageOptions>) => MessageInstance;
@@ -425,9 +595,26 @@ pagerCount: number;
 
 export declare const MSelect: __VLS_WithTemplateSlots_3<typeof __VLS_component_3, __VLS_TemplateResult_3["slots"]>;
 
+export declare const MStarRating: DefineComponent<__VLS_Props_12, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+"update:modelValue": (value: number) => any;
+}, string, PublicProps, Readonly<__VLS_Props_12> & Readonly<{
+"onUpdate:modelValue"?: ((value: number) => any) | undefined;
+}>, {
+size: number;
+readonly: boolean;
+maxStars: number;
+gap: number;
+fillColor: string;
+emptyColor: string;
+strokeWidth: number;
+wrapperClass: string;
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+
 export declare const MTable: __VLS_WithTemplateSlots_4<typeof __VLS_component_4, __VLS_TemplateResult_4["slots"]>;
 
 export declare const MTabs: __VLS_WithTemplateSlots_6<typeof __VLS_component_6, __VLS_TemplateResult_6["slots"]>;
+
+export declare const MTooltip: __VLS_WithTemplateSlots_8<typeof __VLS_component_8, __VLS_TemplateResult_8["slots"]>;
 
 export declare const MTree: __VLS_WithTemplateSlots_7<typeof __VLS_component_7, __VLS_TemplateResult_7["slots"]>;
 
