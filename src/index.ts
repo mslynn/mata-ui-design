@@ -10,6 +10,7 @@ import MModal from './components/MModal.vue'
 import MPagination from './components/MPagination.vue'
 import MTabs from './components/MTabs.vue'
 import MTree from './components/MTree.vue'
+import MMessage from './components/MMessage'
 
 // 导出单独组件
 export {
@@ -20,7 +21,8 @@ export {
     MModal,
     MPagination,
     MTabs,
-    MTree
+    MTree,
+    MMessage
 }
 
 // 导出 Vue 插件安装方法
@@ -34,5 +36,6 @@ export default {
         app.component('MPagination', MPagination)
         app.component('MTabs', MTabs)
         app.component('MTree', MTree)
+        app.config.globalProperties.$message = MMessage
     }
 }

@@ -371,7 +371,39 @@ export default _default;
 
 export declare const MButton: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 
+declare interface MessageInstance {
+    id: string;
+    close: () => void;
+}
+
+declare interface MessageOptions {
+    message: string;
+    type?: MessageType;
+    duration?: number;
+    showClose?: boolean;
+}
+
+/**
+ * 消息提示组件（函数式调用）
+ * 使用方式：
+ * import { ElMessage } from '~/components/ui/ElMessage'
+ * ElMessage.success('操作成功')
+ * ElMessage.error('操作失败')
+ * ElMessage.warning('警告信息')
+ * ElMessage.info('提示信息')
+ */
+declare type MessageType = 'success' | 'error' | 'warning' | 'info';
+
 export declare const MInput: __VLS_WithTemplateSlots_2<typeof __VLS_component_2, __VLS_TemplateResult_2["slots"]>;
+
+export declare const MMessage: {
+    success: (message: string, options?: Partial<MessageOptions>) => MessageInstance;
+    error: (message: string, options?: Partial<MessageOptions>) => MessageInstance;
+    warning: (message: string, options?: Partial<MessageOptions>) => MessageInstance;
+    info: (message: string, options?: Partial<MessageOptions>) => MessageInstance;
+    close: (id: string) => void;
+    closeAll: () => void;
+};
 
 export declare const MModal: __VLS_WithTemplateSlots_5<typeof __VLS_component_5, __VLS_TemplateResult_5["slots"]>;
 
