@@ -31,7 +31,8 @@ export default defineConfig({
                             items: [
                                 { text: 'Button', link: '/components/button' },
                                 { text: 'Input', link: '/components/input' },
-                                { text: 'Select', link: '/components/select' }
+                                { text: 'Select', link: '/components/select' },
+                                { text: 'DateRangePicker', link: '/components/date-range-picker' }
                             ]
                         },
                         {
@@ -40,14 +41,19 @@ export default defineConfig({
                                 { text: 'Table', link: '/components/table' },
                                 { text: 'Pagination', link: '/components/pagination' },
                                 { text: 'Tree', link: '/components/tree' },
-                                { text: 'Tabs', link: '/components/tabs' }
+                                { text: 'Tabs', link: '/components/tabs' },
+                                { text: 'StarRating', link: '/components/star-rating' },
+                                { text: 'LazyImage', link: '/components/lazy-image' },
+                                { text: 'ImagePreview', link: '/components/image-preview' }
                             ]
                         },
                         {
                             text: 'Feedback',
                             items: [
                                 { text: 'Modal', link: '/components/modal' },
-                                { text: 'Message', link: '/components/message' }
+                                { text: 'Message', link: '/components/message' },
+                                { text: 'Tooltip', link: '/components/tooltip' },
+                                { text: 'FilterPopover', link: '/components/filter-popover' }
                             ]
                         }
                     ]
@@ -80,7 +86,8 @@ export default defineConfig({
                             items: [
                                 { text: 'Button 按钮', link: '/zh/components/button' },
                                 { text: 'Input 输入框', link: '/zh/components/input' },
-                                { text: 'Select 选择器', link: '/zh/components/select' }
+                                { text: 'Select 选择器', link: '/zh/components/select' },
+                                { text: 'DateRangePicker 日期区间', link: '/zh/components/date-range-picker' }
                             ]
                         },
                         {
@@ -89,14 +96,19 @@ export default defineConfig({
                                 { text: 'Table 表格', link: '/zh/components/table' },
                                 { text: 'Pagination 分页', link: '/zh/components/pagination' },
                                 { text: 'Tree 树形控件', link: '/zh/components/tree' },
-                                { text: 'Tabs 标签页', link: '/zh/components/tabs' }
+                                { text: 'Tabs 标签页', link: '/zh/components/tabs' },
+                                { text: 'StarRating 星级评分', link: '/zh/components/star-rating' },
+                                { text: 'LazyImage 懒加载图片', link: '/zh/components/lazy-image' },
+                                { text: 'ImagePreview 图片预览', link: '/zh/components/image-preview' }
                             ]
                         },
                         {
                             text: '反馈',
                             items: [
                                 { text: 'Modal 对话框', link: '/zh/components/modal' },
-                                { text: 'Message 消息提示', link: '/zh/components/message' }
+                                { text: 'Message 消息提示', link: '/zh/components/message' },
+                                { text: 'Tooltip 文字提示', link: '/zh/components/tooltip' },
+                                { text: 'FilterPopover 筛选弹层', link: '/zh/components/filter-popover' }
                             ]
                         }
                     ]

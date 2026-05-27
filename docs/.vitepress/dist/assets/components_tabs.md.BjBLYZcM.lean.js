@@ -1,1 +1,0 @@
-import{c as i,o as a,ai as t}from"./chunks/framework.DWXoSCcz.js";const e=JSON.parse('{"title":"Tabs","description":"","frontmatter":{},"headers":[],"relativePath":"components/tabs.md","filePath":"components/tabs.md"}'),h={name:"components/tabs.md"},p=Object.assign(h,{setup(n){return(l,s)=>(a(),i("div",null,[...s[0]||(s[0]=[t("",21)])]))}});export{e as __pageData,p as default};
